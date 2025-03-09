@@ -1,0 +1,12 @@
+---
+
+import {SCORE_API_ENDPOINT} from "astro:env/server"
+
+
+const res = await fetch(SCORE_API_ENDPOINT)
+const score_value = await res.text();
+---
+
+<span id="score">
+    ⭐ Puntuación: {score_value.trim()}
+</span>
